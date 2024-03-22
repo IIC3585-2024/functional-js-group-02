@@ -1,9 +1,9 @@
 import { readFileSync } from 'fs';
-import processFile from './functions.js';
+import processFile from './parser.js';
 
 async function main(inputFile) {
   try {
-    const content = await readFileSync(inputFile, { encoding: 'utf8', flag: 'r' });
+    const content = readFileSync(inputFile, { encoding: 'utf8', flag: 'r' });
     const output = processFile(content);
     console.log(output);
   } catch (error) {
