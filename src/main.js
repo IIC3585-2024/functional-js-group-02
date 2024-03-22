@@ -1,9 +1,9 @@
-const fs = require('fs');
-const { processFile } = require('./functions.js');
+import { readFileSync } from 'fs';
+import processFile from './functions.js';
 
 async function main(inputFile) {
   try {
-    const content = await fs.readFileSync(inputFile, { encoding: 'utf8', flag: 'r' });
+    const content = await readFileSync(inputFile, { encoding: 'utf8', flag: 'r' });
     const output = processFile(content);
     console.log(output);
   } catch (error) {
@@ -11,4 +11,4 @@ async function main(inputFile) {
   }
 }
 
-main("page.md");
+main("inputs/page.md");

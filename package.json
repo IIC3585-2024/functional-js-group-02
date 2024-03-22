@@ -2,7 +2,8 @@
   "name": "functional-js-group-02",
   "version": "1.0.0",
   "description": "Este es el repositorio de la tarea del grupo 2 del curso IIC3585.",
-  "main": "main.js",
+  "main": "src/main.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
