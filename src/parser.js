@@ -3,7 +3,7 @@ import pipe from './utils.js';
 
 const processFile = pipe([
   input => blockquoteToHtml(input),
-  input => regexAll(input)
+  input => regexAll(input),
 ]);
 
 const regexAll = pipe([
@@ -18,13 +18,12 @@ const regexAll = pipe([
   input => input.replace(regexMd['`'], (match, codeFragment) => codeFragment ? `<code>${codeFragment}</code>` : match),
   input => input.replace(regexMd['```'], '<pre><code>$1</code></pre>'),
   input => input.replace(regexMd['  '], '<br>'),
-  input => input.replace(regexMd['\n'], '$1 $2'),
   input => input.replace(regexMd['link'], '<a href="$2">$1</a>'),
   input => input.replace(regexMd['img'], '<img src="$2" alt="$1" title="$3">'),
-  // input => input.replace(regexMd['p'], '<p>$1</p>\n'),
+  input => input.replace(regexMd['p'], '<p>$1</p>\n'),
 ]);
 
-function blockquoteToHtml(markdown) {
+const blockquoteToHtml = (markdown) => {
   const lines = markdown.split('\n');
   let htmlLines = [];
   let inBlockquote = false;
