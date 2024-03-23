@@ -82,9 +82,12 @@ Así podemos poner `codigo`
 
 Y un bloque de código:
 
-    Codigo, guau
+```
+Codigo, guau
+```
 
 Impresionante
 
 Link épico: [Esto es un link a google](https://google.com).
 
+Imagen épica: ![The San Juan Mountains are beautiful!](/assets/images/san-juan-mountains.jpg "San Juan Mountains")
