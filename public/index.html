@@ -14,8 +14,8 @@
 
             <div id="container">
                 <textarea id="markdown" rows="10" cols="50"># Hola</textarea>
-                <button id="click-button" onclick="addCode()">
-                    Add Stuff
+                <button id="click-button" onclick="generateHtml()">
+                    Generar HTML
                 </button>
             </div>
             <div id="html-space"></div>
@@ -23,34 +23,15 @@
 
     </div>
 
-
-
-
-
-
-    <!-- <script type="module">
-        import { processFileInPipeline } from '../functions.js';
-        function convertMarkdown() {
-            let markdown = document.getElementById("markdown").value;
-            markdown = processFileInPipeline(markdown);
-            console.log(markdown);
-
-        }
-        window.convertMarkdown = convertMarkdown;
-    </script> -->
-
-
-
     <script type="module">
-        // import { processFileInPipeline } from '../functions.js';
         import processText from './src/parsers/index.js';
-        function addCode() {
+        function generateHtml() {
 
             let markdown = document.getElementById("markdown").value;
             markdown = processText(markdown);
             document.getElementById('html-space').innerHTML = markdown;
         }
-        window.addCode = addCode;
+        window.generateHtml = generateHtml;
     </script>
 
 
