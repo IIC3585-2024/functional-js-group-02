@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <h1 id="main-title"> Traductor de Markdown a HTML</h1>
+        <div class="main-container">
+
+            <div id="container">
+                <textarea id="markdown" rows="10" cols="50"># Hola</textarea>
+                <button id="click-button" onclick="addCode()">
+                    Add Stuff
+                </button>
+            </div>
+            <div id="html-space"></div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <!-- <script type="module">
+        import { processFileInPipeline } from '../functions.js';
+        function convertMarkdown() {
+            let markdown = document.getElementById("markdown").value;
+            markdown = processFileInPipeline(markdown);
+            console.log(markdown);
+
+        }
+        window.convertMarkdown = convertMarkdown;
+    </script> -->
+
+
+
+    <script type="module">
+        // import { processFileInPipeline } from '../functions.js';
+        import processText from './src/parsers/index.js';
+        function addCode() {
+
+            let markdown = document.getElementById("markdown").value;
+            markdown = processText(markdown);
+            document.getElementById('html-space').innerHTML = markdown;
+        }
+        window.addCode = addCode;
+    </script>
+
+
+    <script>
+        function show(param_div_id) {
+
+            document.getElementById('html-space').innerHTML = document.getElementById(param_div_id).innerHTML;
+
+        }
+    </script>
+
+</body>
+
+</html>
