@@ -36,6 +36,12 @@ Esto es una lista con orden:
 1. First item
 2. Second item
 3. Third item
+4. Fourth item
+
+Esta tambien está con orden:
+1. First item
+2. Second item
+3. Third item
     1. Indented item
     2. Indented item
 4. Fourth item
@@ -66,16 +72,9 @@ Y ya filo, esta también, pero al menos está indentada:
     - Indented item
 - Fourth item
 
-Lista no ordenada que tiene un número con un punto al inicio:
-- 1968\. A great year!
-- I think 1969 was second best.
-
 Y una lista con elementos entre medio:
 * This is the first list item.
 * Here's the second list item.
-
-    I need to add another paragraph below the second list item.
-
 * And here's the third list item.
 
 Así podemos poner `codigo`
@@ -84,6 +83,7 @@ Y un bloque de código:
 
 ```
 Codigo, guau
+   un buen bloque
 ```
 
 Impresionante
