@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <h1 id="main-title"> Traductor de Markdown a HTML</h1>
+        <div class="main-container">
+
+            <div id="container">
+                <textarea id="markdown" rows="10" cols="50"># Hola</textarea>
+                <button id="click-button" onclick="generateHtml()">
+                    Generar HTML
+                </button>
+            </div>
+            <div id="html-space"></div>
+        </div>
+
+    </div>
+
+    <script type="module">
+        import processText from './src/parsers/index.js';
+        function generateHtml() {
+
+            let markdown = document.getElementById("markdown").value;
+            markdown = processText(markdown);
+            document.getElementById('html-space').innerHTML = markdown;
+        }
+        window.generateHtml = generateHtml;
+    </script>
+
+
+    <script>
+        function show(param_div_id) {
+
+            document.getElementById('html-space').innerHTML = document.getElementById(param_div_id).innerHTML;
+
+        }
+    </script>
+
+</body>
+
+</html>

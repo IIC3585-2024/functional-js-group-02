@@ -1,0 +1,20 @@
+{
+  "name": "functional-js-group-02",
+  "version": "1.0.0",
+  "description": "Este es el repositorio de la tarea del grupo 2 del curso IIC3585.",
+  "main": "src/main.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "parse": "node public/src/main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.19.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0"
+  }
+}
