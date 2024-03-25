@@ -90,4 +90,5 @@ Impresionante
 
 Link épico: [Esto es un link a google](https://google.com).
 
-Imagen épica: ![The San Juan Mountains are beautiful!](/assets/images/san-juan-mountains.jpg "San Juan Mountains")
+Imagen épica:  
+![image!](https://i.pinimg.com/474x/ff/c1/e9/ffc1e9b9295d65f16aed2ddcbd2818b2.jpg "image")
