@@ -5,7 +5,8 @@
   "main": "src/main.js",
   "type": "module",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "parse": "node public/src/main.js"
   },
   "author": "",
   "license": "ISC",
