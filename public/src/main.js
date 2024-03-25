@@ -12,4 +12,4 @@ async function main(inputFile) {
 }
 
 // Coloca el archivo que deseas procesar
-main('./inputs/ex1.md');
+main('./inputs/page.md');
